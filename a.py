@@ -40,7 +40,7 @@ class JacquesThreeMod(loader.Module):
 				txt = reply.raw_text
 		else:
 			txt = utils.get_args_raw(message)
-		await message.edit("<b>На размышление дается 30 секунд...</b>")
+		await message.edit("<b>Подписи документов...</b>")
 		pic = requests.get("https://i.imgur.com/BFg1NcK.png")
 		pic.raw.decode_content = True
 		img = Image.open(io.BytesIO(pic.content)).convert("RGB")
@@ -60,7 +60,7 @@ class JacquesThreeMod(loader.Module):
 		w, h = 450, 330
 		img.paste(imtext, (2,100), imtext)
 		out = io.BytesIO()
-		out.name = "@sad0ff.jpg"
+		out.name = "@sad0ff.webp"
 		img.save(out)
 		out.seek(0)
 		await message.client.send_file(message.to_id, out, reply_to=reply)
