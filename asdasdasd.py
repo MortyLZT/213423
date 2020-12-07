@@ -35,7 +35,7 @@ class JacquesThreeMod(loader.Module):
 
 		if not args:
 			if not reply:
-				txt = message.sender.first_name + ' ' + message.sender.last_name
+				txt = message.first_name + ' ' + message.last_name
 			else:
 				txt = reply.sender.first_name + ' ' + reply.sender.last_name
 
