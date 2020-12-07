@@ -55,8 +55,8 @@ class JacquesThreeMod(loader.Module):
 		w, h = draw.multiline_textsize(t, font=font)
 		imtext = Image.new("RGBA", (w+50, h+50), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
-    text_size = draw.textsize(imtext, font)
-    print(text_size)
+    		text_size = draw.textsize(imtext, font)
+   		 print(text_size)
 		draw.multiline_text((40, 40),t,(0,0,0),font=font, align='left')
 		imtext.thumbnail((450, 330))
 		w, h = 450, 330
