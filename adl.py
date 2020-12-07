@@ -54,7 +54,7 @@ class JacquesThreeMod(loader.Module):
 		imtext = Image.new("RGBA", (int(w), h+300), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
 		draw.text((40, 40),t,(0,0,0),font=font, align='center')
-		imtext.thumbnail((450, 330))
+		imtext.thumbnail((900, 330))
 		img.paste(imtext, (2,100), imtext)
 		out = io.BytesIO()
 		out.name = "@sad0ff.webp"
