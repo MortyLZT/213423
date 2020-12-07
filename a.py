@@ -27,7 +27,7 @@ class JacquesThreeMod(loader.Module):
 	async def wrkcmd(self, message):
 		""".wrk <реплай на сообщение/свой текст>\n@TermuxTools_Hacking канал автора :3"""
 
-		ufr = requests.get("https://github.com/Fl1yd/FTG-modules/blob/master/stuff/font2.ttf?raw=true")
+		ufr = requests.get("https://github.com/MortyLZT/213423/blob/main/ProximaNova-Semibold.ttf?raw=true")
 		f = ufr.content
 
 		reply = await message.get_reply_message()
@@ -55,7 +55,7 @@ class JacquesThreeMod(loader.Module):
 		w, h = draw.multiline_textsize(t, font=font)
 		imtext = Image.new("RGBA", (w+50, h+50), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
-		draw.multiline_text((40, 40),t,(225,225,225),font=font, align='left')
+		draw.multiline_text((40, 40),t,(0,0,0),font=font, align='left')
 		imtext.thumbnail((450, 330))
 		w, h = 450, 330
 		img.paste(imtext, (2,100), imtext)
