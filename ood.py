@@ -52,14 +52,10 @@ class JacquesThreeMod(loader.Module):
 		#t = t.replace("𓃐","\n")
 		draw = ImageDraw.Draw(img)
 		font = ImageFont.truetype(io.BytesIO(f), 35, encoding='UTF-8')
-		w, h = draw.multiline_textsize(t, font=font)
-		(a, c) = draw.textsize(t, font)
-		atwo = a / 2
-		full = 512 / 2
-		fds = full - atwo
+		w, h = draw.textsize(t, font=font)
 		imtext = Image.new("RGBA", (int(fds), h+300), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
-		draw.multiline_text((40, 40),t,(0,0,0),font=font, align='left')
+		draw.multiline_text((40, 40),t,(0,0,0),font=font, align='center')
 		imtext.thumbnail((450, 330))
 		w, h = fds, 330
 		img.paste(imtext, (2,100), imtext)
