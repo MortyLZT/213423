@@ -37,8 +37,9 @@ class JacquesThreeMod(loader.Module):
 			if not reply:
 				txt = 'Мне'
 			else:
-				txt = reply.sender.first_name + ' ' + reply.sender.last_name
-
+				txt = reply.sender.first_name
+				if reply.sender.last_name != '':
+					txt = txt + reply.sender.last_name
 		else:
 			txt = utils.get_args_raw(message)
 
