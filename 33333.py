@@ -57,7 +57,7 @@ class JacquesThreeMod(loader.Module):
 		atwo = a / 2
 		full = 512 / 2
 		fds = full - atwo
-		imtext = Image.new("RGBA", (w+50, h+50), (0, 0,0,0))
+		imtext = Image.new("RGBA", (fds, h+50), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
 		draw.multiline_text((40, 40),t,(0,0,0),font=font, align='left')
 		imtext.thumbnail((450, 330))
