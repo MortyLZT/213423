@@ -53,7 +53,7 @@ class JacquesThreeMod(loader.Module):
 		draw = ImageDraw.Draw(img)
 		font = ImageFont.truetype(io.BytesIO(f), 35, encoding='UTF-8')
     text_size = draw.textsize(t, font)
-    print(text_size)
+    print text_size
 		w, h = draw.multiline_textsize(t, font=font)
 		imtext = Image.new("RGBA", (w+50, h+50), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
