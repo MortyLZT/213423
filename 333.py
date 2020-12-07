@@ -59,7 +59,7 @@ class JacquesThreeMod(loader.Module):
 		draw = ImageDraw.Draw(imtext)
 		draw.multiline_text((40, 40),t,(0,0,0),font=font, align='left')
 		imtext.thumbnail((450, 330))
-		w, h = as, 330
+		w, h = 12, 330
 		img.paste(imtext, (2,100), imtext)
 		out = io.BytesIO()
 		out.name = "@sad0ff.webp"
