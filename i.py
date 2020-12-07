@@ -55,7 +55,6 @@ class JacquesThreeMod(loader.Module):
 		w, h = draw.multiline_textsize(t, font=font)
 		(a, c) = draw.textsize(t, font)
 		print(a)
-		as = (512 / 2) - (a / 2)
 		imtext = Image.new("RGBA", (w+50, h+50), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
 		draw.multiline_text((40, 40),t,(0,0,0),font=font, align='left')
