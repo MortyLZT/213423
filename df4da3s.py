@@ -53,7 +53,7 @@ class JacquesThreeMod(loader.Module):
 		w = W/2-w/2
 		imtext = Image.new("RGBA", (W, H), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
-		draw.text((100, 130),t,(0,0,0),font=font, align='center')
+		draw.text((100, 150),t,(0,0,0),font=font)
 		imtext.thumbnail((5000, 5000))
 		img.paste(imtext, (2,100), imtext)
 		out = io.BytesIO()
