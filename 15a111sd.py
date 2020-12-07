@@ -46,7 +46,7 @@ class SkolkoMod(loader.Module):
 
 def lol(background, image, cords, size):
     overlay = Image.open(BytesIO(image))
-    overlay = overlay.resize((size * 1, size * 1))
+    overlay = overlay.resize((size * 2, size * 2))
     background.paste(overlay, cords)
 
 
