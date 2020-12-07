@@ -46,7 +46,7 @@ class JacquesThreeMod(loader.Module):
 		img = Image.open(io.BytesIO(pic.content)).convert("RGB")
 
 		W, H = img.size
-		t = text
+		t = txt
 		draw = ImageDraw.Draw(img)
 		font = ImageFont.truetype(io.BytesIO(f), 35, encoding='UTF-8')
 		w, h = draw.textsize(t, font=font)
