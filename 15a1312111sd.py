@@ -51,7 +51,7 @@ def lol(background, image, cords, size):
 
 
 def haha(image):
-    pics = requests.get("https://i.imgur.com/fwvXPYf.png")
+    pics = requests.get("https://i.imgur.com/Pc8okaZ.png")
     pics.raw.decode_content = True
     img = Image.open(io.BytesIO(pics.content)).convert("RGBA")
     lol(img, image, (20, 130), 150)
