@@ -32,13 +32,15 @@ class JacquesThreeMod(loader.Module):
 
 		reply = await message.get_reply_message()
 		args = utils.get_args_raw(message)
+
 		if not args:
 			if not reply:
-				txt = reply.sender
+				txt = reply.sender.first_name + ' ' + reply.sender.last_name
 			else:
-				txt = message.sender
+				txt = message.sender.first_name + ' ' + message.sender.last_name
 		else:
 			txt = utils.get_args_raw(message)
+
 		await message.edit("<b>Подписи документов...</b>")
 		pic = requests.get("https://i.imgur.com/BFg1NcK.png")
 		pic.raw.decode_content = True
