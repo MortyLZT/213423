@@ -54,12 +54,14 @@ class JacquesThreeMod(loader.Module):
 		font = ImageFont.truetype(io.BytesIO(f), 35, encoding='UTF-8')
 		w, h = draw.multiline_textsize(t, font=font)
 		(a, c) = draw.textsize(t, font)
-		print(a)
+		atwo = a / 2
+		full = 512 / 2
+		fds = full - atwo
 		imtext = Image.new("RGBA", (w+50, h+50), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
 		draw.multiline_text((40, 40),t,(0,0,0),font=font, align='left')
 		imtext.thumbnail((450, 330))
-		w, h = 12, 330
+		w, h = fds, 330
 		img.paste(imtext, (2,100), imtext)
 		out = io.BytesIO()
 		out.name = "@sad0ff.webp"
