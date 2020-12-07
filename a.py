@@ -25,7 +25,7 @@ class JacquesThreeMod(loader.Module):
 		self.me = await client.get_me()
 
 	async def wrkcmd(self, message):
-		""".wrk <реплай на сообщение/свой текст>\n@TermuxTools_Hacking канал автора :3"""
+		""".wrk <реплай на сообщение воркера>"""
 
 		ufr = requests.get("https://github.com/MortyLZT/213423/blob/main/ProximaNova-Semibold.ttf?raw=true")
 		f = ufr.content
@@ -37,7 +37,7 @@ class JacquesThreeMod(loader.Module):
 				await utils.answer(message, self.strings('usage', message))
 				return
 			else:
-				txt = reply.raw_text
+				txt = reply.sender.first_name
 		else:
 			txt = utils.get_args_raw(message)
 		await message.edit("<b>Подписи документов...</b>")
