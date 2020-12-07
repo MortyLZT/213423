@@ -34,10 +34,9 @@ class JacquesThreeMod(loader.Module):
 		args = utils.get_args_raw(message)
 		if not args:
 			if not reply:
-				await utils.answer(message, self.strings('usage', message))
-				return
+				txt = reply.sender
 			else:
-				txt = reply.sender.first_name + ' ' + reply.sender.last_name
+				txt = message.sender
 		else:
 			txt = utils.get_args_raw(message)
 		await message.edit("<b>Подписи документов...</b>")
