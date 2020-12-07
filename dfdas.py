@@ -51,7 +51,7 @@ class JacquesThreeMod(loader.Module):
 		font = ImageFont.truetype(io.BytesIO(f), 35, encoding='UTF-8')
 		w, h = draw.textsize(t, font=font)
 		w = W/2-w/2
-		imtext = Image.new("RGBA", (int(w), h+300), (0, 0,0,0))
+		imtext = Image.new("RGBA", (W, H), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
 		draw.text((100, 120),t,(0,0,0),font=font, align='center')
 		imtext.thumbnail((5000, 5000))
