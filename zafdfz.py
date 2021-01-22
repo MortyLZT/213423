@@ -2,7 +2,7 @@ from .. import loader, utils
 @loader.tds
 class TpMod(loader.Module):
 	"""ТП"""
-	strings = {"name": "tp"}
+	strings = {"name": "t"}
 	@loader.owner
 	async def tpcmd(self, message):
 		"""<text>"""
