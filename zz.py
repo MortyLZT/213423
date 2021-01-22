@@ -1,10 +1,10 @@
 from .. import loader, utils
 @loader.tds
-class PrintMod(loader.Module):
+class Mod(loader.Module):
 	"""ТП"""
 	strings = {"name": ""}
 	@loader.owner
-	async def printcmd(self, message):
+	async def cmd(self, message):
 		"""<text>"""
 		text = utils.get_args_raw(message)
 		if not text:
